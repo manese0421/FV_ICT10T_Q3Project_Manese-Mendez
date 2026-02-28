@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> 
-
     <title>Sign Up Page</title>
 
 <style>
@@ -108,27 +106,44 @@
 
 <body>
 
+    <!-- Navigation bar for switching between pages -->
     <nav class="navbar">
+        <!-- Title/brand of the system -->
         <div class="navbar-brand">Intrams A.Y. 25-26</div>
+
+        <!-- Navigation links -->
         <div>
+            <!-- Link to sign up page -->
             <a href="index.html">Sign Up</a>
+
+            <!-- Link to team checker page -->
             <a href="teamcheck.html">Team Checker</a>
+
+            <!-- Link to players list page -->
             <a href="players.html">Players</a>
         </div>
     </nav>
 
+    <!-- Main card container for the signup form -->
     <div class="card">
+
+        <!-- Page title -->
         <h1>Create Account</h1>
 
+        <!-- Username input field -->
         <input type="text" id="user" placeholder="Enter Username">
 
+        <!-- Password input field -->
         <input type="password" id="pass" placeholder="Enter Password">
 
+        <!-- Sign up button that triggers the Python function "sign_up" -->
         <button id="sign_up" py-click="sign_up">Sign Up</button>
 
+        <!-- Output box where messages (like success or errors) will appear -->
         <div id="output"></div>
     </div>
 
+    <!-- Links the external Python file -->
     <script type="py" src="main.py"></script>
 
 </body>
