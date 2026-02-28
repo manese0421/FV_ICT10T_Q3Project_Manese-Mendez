@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Players</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
     <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Players</title>
 
 <style>
     body {
@@ -98,23 +99,39 @@
 
 <body>
 
+    <!-- Navigation bar for switching between pages -->
     <nav class="navbar">
+
+        <!-- Title of the system -->
         <div class="navbar-brand">Intrams A.Y. 25-26</div>
+
+        <!-- Navigation links -->
         <div>
+            <!-- Link to sign up page -->
             <a href="index.html">Sign Up</a>
+
+            <!-- Link to team checker page -->
             <a href="teamcheck.html">Team Checker</a>
+
+            <!-- Link to players list page (current page) -->
             <a href="players.html">Players</a>
         </div>
     </nav>
 
+    <!-- Main container card -->
     <div class="card">
+
+        <!-- Section title -->
         <h2>Intramurals Players</h2>
 
+        <!-- Button that triggers the Python function "showPlayers" -->
         <button class="players-btn" py-click="showPlayers">Show Players</button>
 
+        <!-- Output container where the list of players will be displayed -->
         <div id="playerOutput"></div>
     </div>
 
+    <!-- Link to the PyScript Python file that contains the showPlayers function -->
     <script type="py" src="players.py"></script>
 
 </body>
