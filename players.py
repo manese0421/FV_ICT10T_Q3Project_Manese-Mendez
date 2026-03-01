@@ -1,13 +1,10 @@
 from pyscript import document, display
 
-# Function that runs when the "Show Players" button is clicked
-def showPlayers(e):
+def showPlayers(e): # when the 'show players' button is clicked, this function runs
 
-    # Get the output container where player names will be displayed
-    output = document.getElementById("playerOutput")
+    output = document.getElementById("playerOutput") # get the output container where the player names will be displayed
 
-    # List of all intramural players (Last Name, First Name format)
-    players = [
+    players = [ # list of all the intrams players
         "ANDES, AKINGSON JAKE",
         "AYALA, FIL CLAREN",
         "CABRILLOS, MARTINA",
@@ -37,23 +34,19 @@ def showPlayers(e):
         "ZALES, JARIX JOHNUAY"
     ]
 
-    # Clear previous output so the list doesn't duplicate every click
-    output.innerHTML = ""
+    output.innerHTML = "" # clears the previous input so results dont duplicate
 
-    # Loop through the list of players and display them with numbering
-    for i, p in enumerate(players, start=1):
+    for i, p in enumerate(players, start=1): # loop through the list of players and displays them numbered
 
-        # Check if the player string contains a comma (expected format)
-        if "," in p:
-            # Split the string into last name and first name
-            parts = p.split(",")
+        if "," in p: # checks if the player string includes a comma, as per the format
+            parts = p.split(",") # splits the string: last name, first name
 
-        # If the split produced exactly 2 parts (valid format)
-        if len(parts) == 2:
+        if len(parts) == 2: # if the split produces exactky 2 parts:
 
-            # Remove extra spaces and assign last name and first name
+            # remove extra spaces and assign last name and first name
             lastname = parts[0].strip()
             firstname = parts[1].strip()
 
-            # Display the formatted player name with numbering
+            # display the formatted player name with numbering
             output.innerHTML += f"{i}) {lastname}, {firstname}<br>"
+
